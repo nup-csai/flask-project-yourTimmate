@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "ПРОЕКТ ТИМОФЕЯ"
+    return "ПРОЕКТ ТИМОФЕhhfhfhfЯ"
