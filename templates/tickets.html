@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Buy Tickets{% endblock %}
+
+{% block content %}
+<div class="ticket-form-container">
+    <h2>Buy Tickets</h2>
+    <form method="POST" action="{{ url_for('buy_tickets') }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="surname">Surname:</label>
+        <input type="text" name="surname" required>
+
+        <label for="country">Country:</label>
+        <input type="text" name="country" required>
+
+        <button type="submit">Get Ticket</button>
+    </form>
+
+    {% if ticket_number %}
+        <p>
+            Dear {{ name }} {{ surname }} from {{ country }},
+            your ticket number is - {{ ticket_number }}
+        </p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Burning Man{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 10px;
+            top: 50px;
+            border-radius: 5px;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+        .dropdown-menu.show {
+            display: block;
+        }
+        .menu-button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo-container">
+                <a href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='Burning_Man_Project_Logo.png') }}" class="navbar-logo">
+                </a>
+            </div>
+            <div class="menu-button" onclick="toggleMenu()">☰</div>
+            <div class="dropdown-menu" id="menuDropdown">
+                <!-- Обратите внимание: порядок ссылок вы можете менять под свою логику -->
+                <a href="{{ url_for('contacts') }}">Read More</a>
+                <a href="{{ url_for('history') }}">Contacts</a>
+                <!-- Новый пункт "Tickets" -->
+                <a href="{{ url_for('buy_tickets') }}">Tickets</a>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menuDropdown").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
+

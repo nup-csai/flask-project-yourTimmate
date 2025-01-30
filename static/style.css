@@ -1,0 +1,133 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ded4be;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+}
+
+h1 {
+    margin: 30px 0;
+    font-size: 3em;
+    color: #f1f1f1;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.navbar-logo-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-logo {
+    height: 70px;
+    width: auto;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+a img {
+    display: block;
+    height: 70px;
+    width: auto;
+    background-color: transparent;
+}
+
+
+
+.links {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #ded3db;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+
+button {
+    padding: 10px 20px;
+    background-color: #4C9CD9;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3581b8;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 1em;
+    color: #aaa;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #4C9CD9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons .button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4C9CD9;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.buttons .button:hover {
+    background-color: #3581b8;
+}
+

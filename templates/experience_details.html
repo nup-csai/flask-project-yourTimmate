@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ experience['title'] }} - Experience Details{% endblock %}
+
+{% block content %}
+<div class="experience-details">
+    <div class="experience-image">
+        <img src="{{ url_for('static', filename=experience['image']) }}" alt="{{ experience['title'] }}">
+    </div>
+    <div class="experience-info">
+        <h2>{{ experience['title'] }}</h2>
+        <p class="experience-mantra">{{ experience['mantra'] }}</p>
+        <p><strong>Description:</strong> {{ experience['description'] }}</p>
+    </div>
+</div>
+{% endblock %}

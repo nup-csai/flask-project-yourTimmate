@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Burning Man Experiences{% endblock %}
+
+{% block content %}
+<div class="experiences">
+    {% for experience in experiences %}
+        <div class="experience-card">
+            <img src="{{ url_for('static', filename=experience['image']) }}" alt="{{ experience['title'] }}">
+            <h2>{{ experience['title'] }}</h2>
+            <p class="experience-mantra">{{ experience['mantra'] }}</p>
+            <a href="{{ url_for('experience_details', id=experience['id']) }}" class="links">View Details</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
